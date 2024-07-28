@@ -7,28 +7,28 @@ import {
   Grid,
   Typography,
 } from "@mui/joy";
-import { Stack } from "@mui/joy";
 
 function BlogPostItems({ newsData }) {
   return (
-    <Grid container spacing={6} sx={{ flexGrow: 1 }} >
+    <>
       {newsData.map((article, index) => (
         <Grid key={index} md={4}>
           <Card
             sx={{
-              width: "420px",
+              width: "370px",
               maxWidth: "100%",
             }}
             color="neutral"
             variant="outlined"
             orientation="horizontal"
-            invertedColors
+            
+            // invertedColors
           >
             <CardContent>
               <AspectRatio sx={{ minWidth: "300px" }}>
                 <img src={article.urlToImage} alt={article.title} />
               </AspectRatio>
-              <Typography variant="h5" component="div" dir="rtl">
+              <Typography variant="h5" component="div" >
                 {article.title}
               </Typography>
               <Typography variant="subtitle1" color="text.secondary">
@@ -48,7 +48,7 @@ function BlogPostItems({ newsData }) {
           </Card>
         </Grid>
       ))}
-    </Grid>
+    </>
   );
 }
 

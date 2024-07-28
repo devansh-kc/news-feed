@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import BlogPostItems from "./BlogPostItems";
 import { TablePagination } from "@mui/base";
 import axios from "axios";
+import { Grid } from "@mui/joy";
 
 function BlogPostList() {
   const [newsData, setNewsData] = useState([]);
@@ -29,7 +30,9 @@ function BlogPostList() {
   }, []);
   return (
     <div className="">
-      <BlogPostItems newsData={newsData} />
+      <Grid container spacing={2} sx={{ flexGrow: 1 }}>
+        <BlogPostItems newsData={newsData} />
+      </Grid>
     </div>
   );
 }

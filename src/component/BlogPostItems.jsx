@@ -12,7 +12,7 @@ function BlogPostItems({ newsData }) {
   return (
     <>
       {newsData.map((article, index) => (
-        <Grid key={index} md={4}>
+        <Grid key={index}>
           <Card
             sx={{
               width: "370px",
@@ -21,14 +21,14 @@ function BlogPostItems({ newsData }) {
             color="neutral"
             variant="outlined"
             orientation="horizontal"
-            
+
             // invertedColors
           >
             <CardContent>
               <AspectRatio sx={{ minWidth: "300px" }}>
                 <img src={article.urlToImage} alt={article.title} />
               </AspectRatio>
-              <Typography variant="h5" component="div" >
+              <Typography variant="h5" component="div">
                 {article.title}
               </Typography>
               <Typography variant="subtitle1" color="text.secondary">

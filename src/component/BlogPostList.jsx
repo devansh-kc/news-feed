@@ -29,7 +29,7 @@ function BlogPostList() {
     fetchNewsFromApi();
   }, []);
   return (
-    <div className="">
+    <div>
       <Grid container spacing={2} sx={{ flexGrow: 1 }}>
         <BlogPostItems newsData={newsData} />
       </Grid>

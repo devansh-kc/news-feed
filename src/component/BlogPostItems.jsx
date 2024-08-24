@@ -25,7 +25,7 @@ function BlogPostItems({ newsData }) {
             // invertedColors
           >
             <CardContent>
-              <AspectRatio sx={{ minWidth: "300px" }}>
+              <AspectRatio sx={{  objectFit:"cover"}} >
                 <img src={article.urlToImage} alt={article.title} />
               </AspectRatio>
               <Typography variant="h5" component="div">

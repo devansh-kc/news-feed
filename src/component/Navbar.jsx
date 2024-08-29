@@ -7,7 +7,7 @@ const Navbar = () => {
     "India",
     "Market",
     "business World",
-    " Tech",
+    "Tech",
     "Local ",
     "Sports",
     "Opinion",
@@ -38,8 +38,8 @@ const Navbar = () => {
           spacing={2}
           className="font-bold  cursor-pointer  m-2 p-2"
         >
-          {data.map((headings) => {
-            return <p>{headings}</p>
+          {data.map((headings,index) => {
+            return <p key={index} >{headings}</p>
           })}
         </Stack>
       </div>

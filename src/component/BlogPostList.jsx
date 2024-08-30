@@ -39,6 +39,10 @@ function BlogPostList() {
       setPage(selectedPage);
   }
 
+  const paginationNumbers = [];
+  for (let index = 1; index <= Math.ceil(newsData.length / 14); index++) {
+    paginationNumbers.push(index);
+  } 
   return (
     <div className="">
       <Grid
@@ -80,7 +84,8 @@ function BlogPostList() {
           <span>Previous</span>
         </button>
         <div className="flex items-center gap-x-1  text-white font-mono">
-          {[...Array(newsData.length / 12)].map((_, i) => {
+          {paginationNumbers.map((pageNumber, i) => {
+
             return (
               <button
                 type="button"
@@ -93,7 +98,7 @@ function BlogPostList() {
                 aria-current="page"
                 key={i}
               >
-                {i + 1}
+                {pageNumber}
               </button>
             );
           })}

@@ -24,7 +24,7 @@ function BlogPostItems({ newsData, pageStartCount }) {
                   ? `${article.description.substring(0, 90)}...`
                   : article.description || "No description available"}
               </p>
-              <a href={article.url} target="_blank" rel="noopener noreferrer">
+              <a href={article.url} target="_blank" rel="noopener noreferrer" >
                 Read More
               </a>
             </div>

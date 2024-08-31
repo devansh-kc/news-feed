@@ -7,7 +7,6 @@ function BlogPostList() {
   const [newsData, setNewsData] = useState([]);
   const [newsDataWithoutImage, setNewsDataWithoutImage] = useState([]);
   const [page, setPage] = useState(1);
-  const num = [1, 2, 3];
 
   async function fetchNewsFromApi() {
     const URL = `https://newsapi.org/v2/everything?q=tech&apiKey=a08f2a51199e446db23bdbfd57b9f2e0`;

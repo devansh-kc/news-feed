@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import BlogPostDetails from "./BlogPostDetails";
 
 function BlogPostItems({ newsData, pageStartCount }) {
+
   return (
     <>
       {newsData
@@ -8,7 +11,7 @@ function BlogPostItems({ newsData, pageStartCount }) {
         .map((article, index) => (
           <div
             key={index}
-            className=" p-[2%]  m-[2%] w-[450px] flex-col  justify-center items-center  text-white font-mono "
+            className=" p-[2%]  m-[2%] max-w-[450px] flex-col  justify-center items-center  text-white font-mono "
           >
             <img
               src={article.urlToImage}
@@ -24,9 +27,9 @@ function BlogPostItems({ newsData, pageStartCount }) {
                   ? `${article.description.substring(0, 90)}...`
                   : article.description || "No description available"}
               </p>
-              <a href={article.url} target="_blank" rel="noopener noreferrer" >
+              <Link to={article.url} target="_blank" rel="noopener noreferrer">
                 Read More
-              </a>
+              </Link>
             </div>
           </div>
         ))}

@@ -1,17 +1,16 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import BlogPostDetails from "./component/BlogPostDetails";
-import BlogPostList from "./component/BlogPostList";
 import Navbar from "./component/Navbar";
+import Footer from "./component/Footer";
 
 function App() {
-  return(
-    <div className="bg-black">
-
-    <Navbar/>
-    <BlogPostList/>
-    
+  return (
+    <div className="">
+      <Navbar />
+      <Outlet />
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default App;
